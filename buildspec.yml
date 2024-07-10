@@ -14,9 +14,15 @@ phases:
         commands:
             - echo "We are in the build block"
             - echo "We will run some tests"
-            - grep -Fq "Congratulations" index.html
-    post_build:
-        commands:
-            - echo "We are in the post-build phase"
-            - echo "Starting the frontend server"
-            - npm run dev
+            - npm run build
+
+artifacts:
+  # include all files required to run application
+  # notably excluded is node_modules, as this will cause overwrite error on deploy
+  files:
+    - public/**/*
+    - src/**/*
+    - package.json
+    - server.js
+    - appspec.yml
+    - scripts/**/*
