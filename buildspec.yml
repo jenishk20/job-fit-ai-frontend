@@ -14,7 +14,7 @@ phases:
   post_build:
     commands:
       - echo "Post build phase"
-      - mkdir -p /tmp/deployment/frontend
+      - mkdir /tmp/deployment/frontend
       - cp -R build/* /tmp/deployment/frontend/
 
 artifacts:
