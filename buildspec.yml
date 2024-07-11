@@ -23,3 +23,5 @@ phases:
 artifacts:
   files:
     - /tmp/deployment/frontend/**/*
+  discard-paths: yes
+  base-directory: /tmp/deployment/frontend
