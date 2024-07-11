@@ -1,9 +1,16 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: .
     destination: /home/ec2-user/frontend
 hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 100
+      runas: ec2-user
   AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 100
+  ApplicationStart:
     - location: scripts/frontend-deploy.sh
-      timeout: 300
+      timeout: 100
