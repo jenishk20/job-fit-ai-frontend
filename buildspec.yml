@@ -15,7 +15,10 @@ phases:
     commands:
       - echo "Post build phase"
       - mkdir -p /tmp/deployment/frontend
+      - echo "Copying build files to /tmp/deployment/frontend"
       - cp -R dist/* /tmp/deployment/frontend/
+      - echo "Listing contents of /tmp/deployment/frontend"
+      - ls -la /tmp/deployment/frontend
 
 artifacts:
   files:
