@@ -1,4 +1,9 @@
-#!/bin/bash
+cd /app
 
-# Ensure the deployment directory exists
-mkdir -p /home/ec2-user/frontend-deployment
+# install node and npm
+apt-get install curl
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+apt-get install nodejs -y
+apt-get install npm -y
+apt install nginx -y
+ufw allow 'Nginx HTTP'
