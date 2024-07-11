@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ec2-user/frontend-deployment
+cd /home/ec2-user/frontend
 
 # Stop existing containers
 docker-compose down
