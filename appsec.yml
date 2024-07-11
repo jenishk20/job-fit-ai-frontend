@@ -1,10 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: /tmp/deployment/frontend/
+  - source: /
     destination: /home/ec2-user/frontend
 hooks:
   AfterInstall:
     - location: scripts/frontend-deploy.sh
       timeout: 300
-      runas: ec2-user
