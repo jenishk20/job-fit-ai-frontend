@@ -6,11 +6,11 @@ phases:
       nodejs: latest
     commands:
       - echo "Installing frontend dependencies"
-      - pnpm install
+      - npm install
   build:
     commands:
       - echo "Building frontend"
-      - pnpm run build
+      - npm run build
   post_build:
     commands:
       - echo "Post build phase"
