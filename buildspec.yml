@@ -27,5 +27,5 @@ artifacts:
     - public/**/*
     - src/**/*
     - package.json
-    - appspec.yml
+    - appsec.yml
     - scripts/**/*
