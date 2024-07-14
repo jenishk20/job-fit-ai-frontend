@@ -1,9 +1,9 @@
-cd /app
+cd /home/ec2-user/frontend-app
 
 # install node and npm
-apt-get install curl
+yum install curl
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-apt-get install nodejs -y
-apt-get install npm -y
-apt install nginx -y
+yum install nodejs -y
+yum install npm -y
+yum install nginx -y
 ufw allow 'Nginx HTTP'

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # navigate to app folder
-cd /app
+cd /home/ec2-user/frontend-app
 
 # install dependencies
 npm install
